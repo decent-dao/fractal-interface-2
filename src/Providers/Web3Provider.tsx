@@ -38,7 +38,7 @@ createWeb3Modal({
   enableAnalytics: true // Optional - defaults to your Cloud configuration
 })
 
-export function ContextProvider({ children }: { children: React.ReactNode }) {
+export default function Web3Provider({ children }: { children: React.ReactNode }) {
   return (
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
