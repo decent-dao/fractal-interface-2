@@ -1,11 +1,10 @@
-import ConnectButton from './ConnectButton'
-import { Container, Heading } from '@chakra-ui/react'
+import { Container } from '@chakra-ui/react'
+import Header from './Header'
 
 function App() {
   return (
-    <Container>
-      <Heading>Fractal</Heading>
-      <ConnectButton />
+    <Container my={2}>
+      <Header />
     </Container>
   )
 }

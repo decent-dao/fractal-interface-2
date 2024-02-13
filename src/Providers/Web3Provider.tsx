@@ -31,13 +31,16 @@ const config = defaultWagmiConfig({
 createWeb3Modal({
   wagmiConfig: config,
   projectId,
+  themeMode: 'light',
   enableAnalytics: true // Optional - defaults to your Cloud configuration
 })
 
-export default function Web3Provider({ children }: { children: React.ReactNode }) {
+function Web3Provider({ children }: { children: React.ReactNode }) {
   return (
     <WagmiProvider config={config}>
       {children}
     </WagmiProvider>
   )
 }
+
+export default Web3Provider

@@ -1,9 +1,11 @@
 import { ChakraProvider } from '@chakra-ui/react'
 
-export default function UIProvider({ children }: { children: React.ReactNode }) {
+function UIProvider({ children }: { children: React.ReactNode }) {
   return (
     <ChakraProvider>
       {children}
     </ChakraProvider>
   )
 }
+
+export default UIProvider
