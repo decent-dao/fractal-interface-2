@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
-import Web3Provider from './Providers/Web3Provider.tsx'
-import UIProvider from './Providers/UIProvider.tsx'
-import QueryProvider from './Providers/QueryProvider.tsx'
+import Web3Provider from './providers/Web3Provider.tsx'
+import UIProvider from './providers/UIProvider.tsx'
+import QueryProvider from './providers/QueryProvider.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
