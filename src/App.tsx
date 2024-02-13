@@ -1,13 +1,12 @@
 import ConnectButton from './ConnectButton'
+import { Container, Heading } from '@chakra-ui/react'
 
 function App() {
   return (
-    <>
-      <h1>Fractal</h1>
-      <div>
-        <ConnectButton />
-      </div>
-    </>
+    <Container>
+      <Heading>Fractal</Heading>
+      <ConnectButton />
+    </Container>
   )
 }
 
