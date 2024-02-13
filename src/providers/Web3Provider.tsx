@@ -30,6 +30,7 @@ const config = defaultWagmiConfig({
 // 3. Create modal
 createWeb3Modal({
   wagmiConfig: config,
+  defaultChain: sepolia,
   projectId,
   themeMode: 'light',
   enableAnalytics: true // Optional - defaults to your Cloud configuration
