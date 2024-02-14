@@ -4,7 +4,7 @@ import Web3Provider from './providers/Web3Provider.tsx'
 import UIProvider from './providers/UIProvider.tsx'
 import QueryProvider from './providers/QueryProvider.tsx'
 import { RouterProvider } from 'react-router-dom'
-import { router } from './pages/router.tsx'
+import { router } from './router'
 
 const root = document.getElementById('root')
 if (root !== null) {
