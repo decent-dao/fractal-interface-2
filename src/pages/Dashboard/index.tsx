@@ -1,7 +1,7 @@
 function Page() {
   return (
     <div>
-      <h1>DAO Treasury</h1>
+      <h1>DAO Dashboard</h1>
     </div>
   )
 }
