@@ -1,9 +1,10 @@
-import { Flex, Heading } from '@chakra-ui/react'
+import { Flex, Heading, Spacer } from '@chakra-ui/react'
 
 function Header () {
   return (
-    <Flex justifyContent={'space-between'}>
+    <Flex>
       <Heading>Fractal</Heading>
+      <Spacer />
       <w3m-button />
     </Flex>
   )

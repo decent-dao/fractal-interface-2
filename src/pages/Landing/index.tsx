@@ -1,8 +1,11 @@
+import { Flex, Button, Input } from '@chakra-ui/react'
+
 function Landing () {
   return (
-    <div>
-      <h1>Landing</h1>
-    </div>
+    <Flex>
+      <Input placeholder='Enter a Safe address' />
+      <Button ml={2}>Load</Button>
+    </Flex>
   )
 }
 
