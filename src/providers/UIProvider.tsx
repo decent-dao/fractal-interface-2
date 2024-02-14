@@ -1,6 +1,6 @@
 import { ChakraProvider } from '@chakra-ui/react'
 
-function UIProvider({ children }: { children: React.ReactNode }) {
+function UIProvider ({ children }: { children: React.ReactNode }) {
   return (
     <ChakraProvider>
       {children}

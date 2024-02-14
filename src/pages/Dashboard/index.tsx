@@ -1,15 +1,15 @@
-import { Suspense } from "react"
-import { useLoaderData, useParams, defer, Await, useAsyncError } from "react-router-dom"
+import { Suspense } from 'react'
+import { useLoaderData, useParams, defer, Await, useAsyncError } from 'react-router-dom'
 
-function ErrorComponent() {
-  const error = useAsyncError() as string;
+function ErrorComponent () {
+  const error = useAsyncError() as Error
 
   return (
-    <div>Error loading dashboard: {error}</div>
+    <div>Error loading dashboard: {error.message}</div>
   )
 }
 
-function Page() {
+function Page () {
   const params = useParams()
   const data = useLoaderData() as { message: string }
 
@@ -33,13 +33,13 @@ function Page() {
   )
 }
 
-function loader() {
+function loader () {
   const p = new Promise((resolve, reject) => {
     return setTimeout(() => {
       if (Math.random() > 0.5) {
-        resolve("foobar")
+        resolve('foobar')
       } else {
-        reject("it just happens sometimes")
+        reject(new Error('it just happens sometimes'))
       }
     }, 2000)
   })
@@ -48,8 +48,8 @@ function loader() {
 }
 
 export const dashboardRoute = {
-  id: "dashboard",
-  path: ":id/dashboard",
+  id: 'dashboard',
+  path: ':id/dashboard',
   loader,
-  element: <Page />,
+  element: <Page />
 }

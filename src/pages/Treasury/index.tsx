@@ -1,4 +1,4 @@
-function Page() {
+function Page () {
   return (
     <div>
       <h1>DAO Treasury</h1>
@@ -6,13 +6,13 @@ function Page() {
   )
 }
 
-function loader() {
+function loader () {
   return true
 }
 
 export const treasuryRoute = {
-  id: "treasury",
-  path: ":id/treasury",
+  id: 'treasury',
+  path: ':id/treasury',
   loader,
-  element: <Page />,
+  element: <Page />
 }
