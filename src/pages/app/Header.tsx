@@ -1,12 +1,18 @@
-import { Flex, Heading, Spacer } from '@chakra-ui/react'
+import { Divider, Flex, HStack, Heading, Spacer } from '@chakra-ui/react'
 
 function Header () {
   return (
-    <Flex>
-      <Heading>Fractal</Heading>
-      <Spacer />
-      <w3m-button />
-    </Flex>
+    <>
+      <Flex mb={2}>
+        <Heading>Fractal</Heading>
+        <Spacer />
+        <HStack>
+          <w3m-button />
+          <w3m-network-button />
+        </HStack>
+      </Flex>
+      <Divider mb={2} />
+    </>
   )
 }
 
