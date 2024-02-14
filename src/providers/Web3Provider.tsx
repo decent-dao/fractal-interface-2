@@ -1,7 +1,7 @@
 import { createWeb3Modal } from '@web3modal/wagmi/react'
 import { defaultWagmiConfig } from '@web3modal/wagmi/react/config'
 
-import { WagmiProvider } from 'wagmi'
+import { WagmiProvider, http } from 'wagmi'
 import { mainnet, sepolia } from 'wagmi/chains'
 
 // 1. Get projectId at https://cloud.walletconnect.com
@@ -25,6 +25,10 @@ const config = defaultWagmiConfig({
   enableEIP6963: true, // Optional - true by default
   enableCoinbase: true, // Optional - true by default
   // ...wagmiOptions // Optional - Override createConfig parameters
+  transports: {
+    [mainnet.id]: http('https://rpc.ankr.com/eth'),
+    [sepolia.id]: http('https://rpc.ankr.com/eth_sepolia'),
+  },
 })
 
 // 3. Create modal

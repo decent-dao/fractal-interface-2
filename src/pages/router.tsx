@@ -1,14 +1,12 @@
 import { createBrowserRouter } from "react-router-dom"
 import Layout from "./app/Layout"
-import { landingRoute } from "./Landing"
-import { treasuryRoute} from "./Treasury"
-import { dashboardRoute } from "./Dashboard"
+import { dashboardRoute } from "./dashboard"
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    children: [landingRoute, dashboardRoute, treasuryRoute],
+    children: [dashboardRoute],
   },
 ])
 
