@@ -23,7 +23,7 @@ const config = defaultWagmiConfig({
   enableWalletConnect: true, // Optional - true by default
   enableInjected: true, // Optional - true by default
   enableEIP6963: true, // Optional - true by default
-  enableCoinbase: true, // Optional - true by default
+  enableCoinbase: true // Optional - true by default
   // ...wagmiOptions // Optional - Override createConfig parameters
 })
 
@@ -36,7 +36,7 @@ createWeb3Modal({
   enableAnalytics: true // Optional - defaults to your Cloud configuration
 })
 
-function Web3Provider({ children }: { children: React.ReactNode }) {
+function Web3Provider ({ children }: { children: React.ReactNode }) {
   return (
     <WagmiProvider config={config}>
       {children}

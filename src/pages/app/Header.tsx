@@ -1,6 +1,6 @@
-import { Flex, Heading } from "@chakra-ui/react"
+import { Flex, Heading } from '@chakra-ui/react'
 
-function Header() {
+function Header () {
   return (
     <Flex justifyContent={'space-between'}>
       <Heading>Fractal</Heading>
