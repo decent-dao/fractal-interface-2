@@ -1,4 +1,3 @@
-
 function Page() {
   return (
     <div>
@@ -8,7 +7,7 @@ function Page() {
 }
 
 function loader() {
-  return  true
+  return true
 }
 
 export const treasuryRoute = {

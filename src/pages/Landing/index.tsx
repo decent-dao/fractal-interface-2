@@ -1,6 +1,4 @@
-import { RouteObject } from "react-router-dom"
 function Page() {
-
   return (
     <div>
       <h1>Landing</h1>
@@ -12,7 +10,7 @@ async function loader() {
   return true
 }
 
-export const landingRoute: RouteObject = {
+export const landingRoute = {
   id: "landing",
   index: true,
   loader,
