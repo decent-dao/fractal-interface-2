@@ -13,6 +13,7 @@ function loader() {
 
 export const treasuryRoute = {
   id: "treasury",
+  path: ":id/treasury",
   loader,
   element: <Page />,
 }

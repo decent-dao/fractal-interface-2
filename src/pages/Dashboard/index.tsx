@@ -13,6 +13,7 @@ function loader() {
 
 export const dashboardRoute = {
   id: "dashboard",
+  path: ":id/dashboard",
   loader,
   element: <Page />,
 }
