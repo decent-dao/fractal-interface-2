@@ -1,7 +1,7 @@
-import Layout from '../pages/app/Layout'
+import Layout from "../pages/app/Layout";
 
-function Component () {
-  return <Layout />
+function Component() {
+  return <Layout />;
 }
 
-export default Component
+export default Component;

@@ -1,7 +1,7 @@
-import Landing from '../pages/Landing'
+import Landing from "../pages/Landing";
 
-function Component () {
-  return <Landing />
+function Component() {
+  return <Landing />;
 }
 
-export default Component
+export default Component;

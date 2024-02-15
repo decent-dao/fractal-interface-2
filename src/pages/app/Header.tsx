@@ -1,6 +1,6 @@
-import { Container, Flex, HStack, Heading, Spacer } from '@chakra-ui/react'
+import { Container, Flex, HStack, Heading, Spacer } from "@chakra-ui/react";
 
-function Header () {
+function Header() {
   return (
     <Container my={2}>
       <Flex>
@@ -12,7 +12,7 @@ function Header () {
         </HStack>
       </Flex>
     </Container>
-  )
+  );
 }
 
-export default Header
+export default Header;
