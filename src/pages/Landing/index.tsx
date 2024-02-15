@@ -1,4 +1,13 @@
-import { HStack, Button, Input, Box, VStack, Heading } from "@chakra-ui/react";
+import {
+  HStack,
+  Button,
+  Input,
+  Box,
+  VStack,
+  Heading,
+  InputGroup,
+  InputLeftAddon,
+} from "@chakra-ui/react";
 import { useWeb3ModalState } from "@web3modal/wagmi/react";
 import { useBlockNumber, useChainId, useChains, useSwitchChain } from "wagmi";
 
