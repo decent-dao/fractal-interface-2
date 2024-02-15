@@ -5,20 +5,19 @@ function ErrorComponent () {
   const error = useAsyncError() as Error
 
   return (
-    <div>Error loading dashboard: {error.message}</div>
+    <div>Error loading Safe: {error.message}</div>
   )
 }
 
-function Dashboard () {
+function Safe () {
   const params = useParams()
   const data = useLoaderData() as { message: string }
 
   return (
     <div>
-      <h1>DAO Dashboard</h1>
-      <pre>{params.id}</pre>
+      <p>Safe: <pre>{params.id}</pre></p>
       <Suspense
-        fallback={<div>Loading dashboard...</div>}
+        fallback={<div>Loading Safe...</div>}
       >
         <Await
           resolve={data.message}
@@ -33,4 +32,4 @@ function Dashboard () {
   )
 }
 
-export default Dashboard
+export default Safe

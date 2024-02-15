@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
 import Layout from './routes/layout'
 import Landing from './routes/landing'
-import Dashboard, { dashboardLoader } from './routes/dashboard'
+import Safe, { safeLoader } from './routes/safe'
 
 export const router = createBrowserRouter([
   {
@@ -13,9 +13,9 @@ export const router = createBrowserRouter([
         element: <Landing />
       },
       {
-        path: ':id/dashboard',
-        loader: dashboardLoader,
-        element: <Dashboard />
+        path: 'safe/:id',
+        loader: safeLoader,
+        element: <Safe />
       }
     ]
   }

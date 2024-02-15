@@ -1,11 +1,11 @@
 import { defer } from 'react-router-dom'
-import Dashboard from '../pages/Dashboard'
+import Safe from '../pages/Safe'
 
 function Component () {
-  return <Dashboard />
+  return <Safe />
 }
 
-export function dashboardLoader () {
+export function safeLoader () {
   const p = new Promise((resolve, reject) => {
     return setTimeout(() => {
       if (Math.random() > 0.5) {
