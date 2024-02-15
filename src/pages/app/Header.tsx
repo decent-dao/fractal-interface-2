@@ -1,10 +1,13 @@
 import { Container, Flex, HStack, Heading, Spacer } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <Container my={2}>
       <Flex>
-        <Heading>Fractal</Heading>
+        <Link to="/">
+          <Heading>Fractal</Heading>
+        </Link>
         <Spacer />
         <HStack>
           <w3m-button />

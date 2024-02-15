@@ -19,7 +19,7 @@ function Safe() {
   return (
     <div>
       <p>
-        Safe: <pre>{params.id}</pre>
+        Safe: <code>{params.id}</code>
       </p>
       <Suspense fallback={<div>Loading Safe...</div>}>
         <Await resolve={data.message} errorElement={<ErrorComponent />}>
