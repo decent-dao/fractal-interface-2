@@ -12,7 +12,7 @@ function NetworkSynchronizer() {
 
   useEffect(() => {
     switchChain({ chainId: web3ModalNetworkId });
-  }, [web3ModalNetworkId]);
+  }, [switchChain, web3ModalNetworkId]);
 
   return null;
 }

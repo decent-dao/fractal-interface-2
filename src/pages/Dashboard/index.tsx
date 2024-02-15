@@ -10,11 +10,11 @@ function Dashboard() {
   const address = "0x5631ADBaD38a9fAf1163a6805791ea6529751859" as Address;
 
   useEffect(() => {
-    totalSupply.fetch({ address }, client);
-    symbol.fetch({ address }, client);
-  }, []);
+    void totalSupply.fetch({ address }, client);
+    void symbol.fetch({ address }, client);
+  }, [client, symbol, totalSupply]);
 
-  if (totalSupply.error) {
+  if (totalSupply.error !== undefined) {
     console.error(totalSupply.error, symbol.error);
   }
 

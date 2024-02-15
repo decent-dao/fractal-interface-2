@@ -19,7 +19,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "safe/:id",
-        loader: safeLoader,
+        loader: ({ params }) => safeLoader(params.id),
         element: <Safe />,
       },
     ],

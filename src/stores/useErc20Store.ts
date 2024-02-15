@@ -14,8 +14,8 @@ export interface Erc20ContractStore {
 export const useErc20Store = create<Erc20ContractStore>((set) => ({
   totalSupply: {
     ...useReadContractStore.getState(),
-    fetch: (contractConfig, client) =>
-      useReadContractStore
+    fetch: async (contractConfig, client) =>
+      await useReadContractStore
         .getState()
         .fetch(
           { ...contractConfig, functionName: "totalSupply", abi: erc20Abi },
@@ -29,8 +29,8 @@ export const useErc20Store = create<Erc20ContractStore>((set) => ({
   },
   decimals: {
     ...useReadContractStore.getState(),
-    fetch: (contractConfig, client) =>
-      useReadContractStore
+    fetch: async (contractConfig, client) =>
+      await useReadContractStore
         .getState()
         .fetch(
           { ...contractConfig, functionName: "decimals", abi: erc20Abi },
@@ -44,8 +44,8 @@ export const useErc20Store = create<Erc20ContractStore>((set) => ({
   },
   balanceOf: {
     ...useReadContractStore.getState(),
-    fetch: (contractConfig, client) =>
-      useReadContractStore
+    fetch: async (contractConfig, client) =>
+      await useReadContractStore
         .getState()
         .fetch(
           { ...contractConfig, functionName: "balanceOf", abi: erc20Abi },
@@ -59,8 +59,8 @@ export const useErc20Store = create<Erc20ContractStore>((set) => ({
   },
   symbol: {
     ...useReadContractStore.getState(),
-    fetch: (contractConfig, client) =>
-      useReadContractStore
+    fetch: async (contractConfig, client) =>
+      await useReadContractStore
         .getState()
         .fetch(
           { ...contractConfig, functionName: "symbol", abi: erc20Abi },
