@@ -1,14 +1,17 @@
-import { Container } from "@chakra-ui/react"
-import Header from "./Header"
-import { Outlet } from "react-router-dom"
+import { Outlet } from "react-router-dom";
+import { Container, Divider } from "@chakra-ui/react";
+import Header from "./Header";
 
 function Layout() {
   return (
-    <Container my={2}>
+    <>
       <Header />
-      <Outlet />
-    </Container>
-  )
+      <Divider />
+      <Container my={2}>
+        <Outlet />
+      </Container>
+    </>
+  );
 }
 
-export default Layout
+export default Layout;
