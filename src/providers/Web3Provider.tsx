@@ -4,27 +4,20 @@ import { defaultWagmiConfig } from "@web3modal/wagmi/react/config";
 import { WagmiProvider } from "wagmi";
 import { mainnet, sepolia } from "wagmi/chains";
 
-// 1. Get projectId at https://cloud.walletconnect.com
-const projectId = "ef9ca770e347c286eded5e15e8154870";
+const projectId = import.meta.env.VITE_WALLETCONNECT_PROJECT_ID;
 
-// 2. Create wagmiConfig
 const metadata = {
-  name: "Fractal",
-  description: "Do more with DAOs",
-  url: "https://app.fractalframework.xyz", // origin must match your domain & subdomain
-  icons: ["https://avatars.githubusercontent.com/u/37784886"],
+  name: import.meta.env.VITE_WALLETCONNECT_METADATA_NAME,
+  description: import.meta.env.VITE_WALLETCONNECT_METADATA_DESCRIPTION,
+  url: import.meta.env.VITE_WALLETCONNECT_METADATA_URL,
+  icons: [import.meta.env.VITE_WALLETCONNECT_METADATA_ICON],
 };
 
 const chains = [sepolia, mainnet] as const;
 const config = defaultWagmiConfig({
-  chains, // required
-  projectId, // required
-  metadata, // required
-  enableWalletConnect: true, // Optional - true by default
-  enableInjected: true, // Optional - true by default
-  enableEIP6963: true, // Optional - true by default
-  enableCoinbase: true, // Optional - true by default
-  // ...wagmiOptions // Optional - Override createConfig parameters
+  chains,
+  projectId,
+  metadata,
 });
 
 // 3. Create modal
