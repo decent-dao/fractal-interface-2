@@ -14,8 +14,9 @@ import Network from "./Network";
 function Landing() {
   const chainId = useChainId();
   const networkPrefix = networkIdToPrefix(chainId);
-  const { data } = useWalletClient()
   const [address, setAddress] = useState("");
+
+  const { data } = useWalletClient();
 
   return (
     <VStack align="start">
@@ -31,12 +32,19 @@ function Landing() {
           />
         </InputGroup>
         <Button>Load</Button>
-        <Button onClick={async () => {
-          const signature = await data?.signMessage({message: "Hello World"})
-          console.log(signature)
-        }
-        }>SignMessage</Button>
       </HStack>
+      <Button
+        onClick={() => {
+          void (async () => {
+            const signature = await data?.signMessage({
+              message: "Hello World",
+            });
+            console.log(signature);
+          })();
+        }}
+      >
+        SignMessage
+      </Button>
       <Network />
     </VStack>
   );
