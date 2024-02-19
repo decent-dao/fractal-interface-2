@@ -1,9 +1,9 @@
 import { Suspense } from "react";
 import {
   useLoaderData,
-  useParams,
   Await,
   useAsyncError,
+  useSearchParams,
 } from "react-router-dom";
 
 function ErrorComponent() {
@@ -12,14 +12,14 @@ function ErrorComponent() {
   return <div>Error loading Safe: {error.message}</div>;
 }
 
-function Safe() {
-  const params = useParams();
+function Home() {
+  const [searchParams] = useSearchParams();
   const data = useLoaderData() as { message: string };
 
   return (
     <div>
       <p>
-        Safe: <code>{params.id}</code>
+        Safe: <code>{searchParams.get("safe")}</code>
       </p>
       <Suspense fallback={<div>Loading Safe...</div>}>
         <Await resolve={data.message} errorElement={<ErrorComponent />}>
@@ -30,4 +30,4 @@ function Safe() {
   );
 }
 
-export default Safe;
+export default Home;

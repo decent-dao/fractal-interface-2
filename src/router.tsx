@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "./routes/layout";
 import Landing from "./routes/landing";
-import Safe, { safeLoader } from "./routes/safe";
+import Home, { homeLoader } from "./routes/home";
 import Dashboard from "./routes/dashboard";
 
 export const router = createBrowserRouter([
@@ -18,9 +18,9 @@ export const router = createBrowserRouter([
         element: <Dashboard />,
       },
       {
-        path: "safe/:id",
-        loader: ({ params }) => safeLoader(params.id),
-        element: <Safe />,
+        path: "home",
+        loader: ({ request }) => homeLoader(request),
+        element: <Home />,
       },
     ],
   },
